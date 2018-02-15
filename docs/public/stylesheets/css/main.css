@@ -645,7 +645,7 @@ a {
     color: #6a6a6a;
     max-width: 45%; }
   .section--home {
-    background: url("/public/img/home-bg.jpg") no-repeat;
+    background: url("../../img/home-bg.jpg") no-repeat;
     background-size: cover;
     background-position-x: 30%;
     min-height: 100vh;
