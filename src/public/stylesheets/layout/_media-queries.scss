@@ -1,0 +1,419 @@
+@media screen and (max-width: map-get($breakpoints, small)){
+
+	.header{
+
+		padding-left: 20px;
+		padding-right: 0px;
+
+		&__logo{
+			font-size: 20px;
+		}
+
+		&__link{
+			display:none;
+		}
+	}
+
+	.btn{
+	
+		&--bottom{
+			bottom: -20px;
+		}
+
+		width: 120px;
+		height: 30px;
+		font-size: 12px;
+	}
+
+	.skateboarder{
+		top:30%;
+	}
+
+	.section{
+
+		padding: 25px 0;
+	
+		&--home{
+			min-height: 400px;
+			height: 50vh;
+		}
+
+		&--what-we-do{
+			padding-left: 0;
+		}
+
+		&--team{
+			height: 550px;
+		}
+
+		&__header{
+			font-size: 20px;
+			margin-left: 0;
+		}
+
+		&__text{
+			font-size: 12px;
+			max-width: 100%;
+		}
+	}
+
+	.container{
+		padding: 10px 10px;
+
+		&--mac{
+			position: initial;
+			width: 100%;
+			max-width: 400px;
+			margin: 0 auto;
+		}
+	}
+
+	.box{
+
+		max-width: 100%;
+		margin: 5px auto;
+
+		&__icon{
+			float: left;
+			transform: scale(0.6);		
+		}
+
+		&__text{
+			padding-left: 0;
+			padding-right: 0;
+			font-size: 12px;
+		}
+
+		&__header{
+			width: initial;
+			float: none;
+			font-size: 20px;
+		}
+
+}
+
+	.client{
+
+		&__container{
+		transform: translateY(0);
+		padding-left: 10%;
+
+			img{
+		     left: -50px;
+		     transform: scale(0.5);
+			}
+		}
+
+		&__card{
+			width: 200px;
+			height: 200px;
+			border: 8px solid #fff;
+			transform: rotate(45deg) translate(-25%,-25%);
+			margin: 0 auto;
+		}
+
+		&__opinion{
+			font-size: 14px;
+			line-height: 18px;
+		}
+
+		&__name{
+			margin-top: 25px;
+			margin-bottom: 10px;
+		}
+	}
+
+
+	.diamonds{
+		width: 100%;
+		position: static;
+		transform: none;
+		margin-bottom: 30px;
+
+		flex-wrap: wrap;
+
+	}
+
+	.diamond{
+		
+		margin: 5px;
+
+		width: 150px;	
+		height: 150px;
+		padding: 5px;
+
+		transform: none;
+		border-radius: 20px;
+		
+
+		&::before{
+			left: -5px;
+			transform: none;
+		}
+
+		&__num{
+			transform: none;
+			font-size: 25px;
+		}
+
+		&__header{
+			transform: none;
+			font-size: 16px;
+			margin-bottom: 5px;
+		}
+
+		&__text{
+			transform: none;
+			font-size: 12px;
+			line-height: 14px;
+		}
+	}
+
+	// out team
+
+	.carousel{
+		
+		height: 75%;
+
+		&__card{
+			min-width: 160px;
+			min-height: 160px;
+
+			border: 2px solid #fff;
+
+			&--left{
+				display: none;
+			}
+
+			&--right{
+				display: none;
+			}	
+		}
+
+		&__arrow{
+			border-right: 40px solid transparent;
+    			border-top: 40px solid #424240;
+
+    			&--left{
+				left: 10px;
+    			}
+
+    			&--right{
+    				right: 10px;
+    			}
+		}
+	}
+
+	.card-caption__name{
+		font-size: 20px;
+		width: 220px;
+	}
+
+
+	.footer{
+		
+		&__links{
+			width: 90%;
+			margin-top: 45px;
+		}
+
+		&-cards{
+			display: block;
+			padding-left: 40%;
+		}
+	}
+
+	.links__icon{
+		margin: 0 4%;
+	}
+}
+
+@media screen and (max-width: map-get($breakpoints, xmedium)) and (min-width: map-get($breakpoints, small))  {
+	
+	.header{
+
+		padding: 0 10px;
+
+		&__icon{
+			
+			&-container{
+				padding-left: 4px;
+			}
+
+			padding-right: 10px;
+
+		}
+		
+		&__link{
+			padding-right: 10px;
+			font-size: 12px;
+		}
+
+	}
+
+	.skateboarder{
+		top: 30%;
+	}
+
+	.section{
+		height: fit-content;
+
+		&--what-we-do{
+			padding-left: 0;
+			
+			> .container{
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+		}
+	}
+
+		.carousel{
+
+		&__arrow{
+			&--right{ right: -160px }
+			&--left{ left: -160px }
+		}
+
+		&__card{
+		min-height: 340px;
+		min-width: 340px;
+
+			&--left{
+		   	transform: rotate(45deg) scale(0.65) translate(0px,0px);
+			}
+
+			&--right{
+		   	transform: rotate(45deg) scale(0.65) translate(0px,0px);
+			}
+		}
+
+	}
+
+	.client{
+
+		&__container{
+		transform: translateY(0) !important;
+		padding-left: 10%;
+
+			img{
+				    left: -50px;
+				    transform: scale(0.5);
+			}
+		}
+
+		&__card{
+			width: 200px;
+			height: 200px;
+			transform: rotate(45deg) translate(-25%,-25%);
+			margin: 0 auto;
+		}
+
+		&__name{
+			margin-top: 25px;
+			margin-bottom: 10px;
+		}
+	}
+
+	.footer{
+
+		&-cards{
+			padding-left: 6%;
+			padding-right: 1%;
+
+			flex-direction: column;
+		}
+
+		&-card{
+			margin: 0 auto;
+			min-width: 300px;
+		}
+
+	}
+
+}
+
+
+// @media screen and (max-width: map-get($breakpoints, large)) and (min-width: map-get($breakpoints, small)) {	
+@media screen and (max-width: map-get($breakpoints, large)) and (min-width: map-get($breakpoints, small)) {	
+
+	.container{
+		padding-left: 70px;
+		padding-right: 70px;
+	}
+
+	.box{
+		&__header{
+			width: 66%;
+		   padding-left: 0px;
+		   margin-top: 26px;
+		   font-size: 18px;
+		}
+
+		&__text{
+			margin-top: 0;
+		   padding-left: 80px;
+		   padding-right: 0px;
+		   font-size: 14px;
+		}
+	}
+
+	.carousel{
+		transform: scale(0.7);
+	}
+	
+
+	.section--how-we-work{
+
+		.diamonds{
+			right: 0%;
+			width: 100%;
+		}
+
+		.diamond{
+			padding: 25px;
+			width: 280px;
+			height: 300px;
+			
+			&__text{
+				font-size: 16px;
+			}
+		}
+
+		.section__text{
+			max-width: 100%;
+		}
+	}
+
+	.section--team{
+		height: 670px;
+	}
+
+	.client__container{
+		transform: translateY(-70%);
+	}
+
+}
+
+@media screen and (min-width: map-get($breakpoints, large)) {	
+
+	.section{
+
+		&--what-we-do{
+			padding-left: 0;
+			
+			> .container{
+				padding: 40px;
+			}
+		}
+	}
+
+	.client__cards{
+		padding-left: 30px;
+	}
+
+	.diamonds{
+		transform: translate(-10%,-20%);
+	}
+	
+}

@@ -1,0 +1,31 @@
+.box{	
+	display: inline-block;
+	max-width: 33%;
+	margin : 20px auto;
+
+	&__icon{
+		height: 100%;
+	}
+
+	&__header{
+		width: 80%;
+		float: right;
+		padding-left: 0px;
+		margin-top: 20px;
+		font-family: "Open Sans";
+		font-weight: 800;
+		font-size: 30px;
+		color: #6f6f6e;
+		text-transform: capitalize;
+	}
+
+	&__text{
+		margin-top: 0;
+		padding-left: 100px;
+		padding-right: 60px;
+		font-size: 17px;
+		line-height: 30px;
+		color: #6a6a6a;
+	}
+
+}

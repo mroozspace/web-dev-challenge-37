@@ -1,0 +1,92 @@
+.client{
+
+	&__container{
+		width: 100%;
+		padding-left: 35%;
+		transform: translateY(-50%);
+
+		img{
+			position: relative;
+			left: -70px;
+			top: 60px;
+		}
+	}
+
+	&__cards{
+		display: inline-flex;
+		padding-top: 50px;
+		padding-left: 0px;
+
+
+	}
+
+
+	&__card{
+		position: relative;
+		display: block;
+		width: 300px;
+		height: 300px;
+		background: #333;
+		transform: rotate(45deg);
+		border: 20px solid #fff;
+		box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.22);
+		z-index: 1;
+		top: 90px;
+		overflow: hidden;
+
+		&::before{
+			background: url('../../img/girl1.jpeg') center;
+			@include card-photo;
+		}
+
+		&--s{
+			position: relative;
+			display: block;
+			width: 60px;
+			height: 60px;
+			background: #333;
+			transform: rotate(45deg);
+			box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.22);
+			z-index: 1;
+			margin: 0 20px;
+			cursor: pointer;
+			overflow: hidden;
+		}
+
+		&--1::before{
+			background: url('../../img/girl1.jpeg') center;
+			@include card-photo;
+		}
+		&--2::before{
+			background: url('../../img/girl2.jpeg') center;
+			@include card-photo;
+		}
+		&--3::before{
+			background: url('../../img/man1.jpeg') center;
+			@include card-photo;
+		}
+
+		&--active{
+			border: 2px solid rgb(188, 46, 58);
+		}
+	}
+
+	&__opinion{
+		color: #6a6a6a;
+		font-style: italic;
+		font-size: 20px;
+		line-height: 35px;
+		margin-left: 20px;
+	}
+
+	&__name{
+		margin-top: 60px;
+		margin-bottom: 20px;
+		padding-left: 20px;
+		color: #6a6a6a;
+		line-height: 30px;
+		height: 19px;
+		font-weight: 700;
+	}
+
+}

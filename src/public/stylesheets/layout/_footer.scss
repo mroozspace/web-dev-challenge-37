@@ -1,0 +1,92 @@
+.footer{
+	position: absolute;
+	left: 0;
+	right: 0;
+	// height: 572px;
+	padding-top: 50px;
+
+	background: url('../../img/footer-bg.jpg') no-repeat;
+	background-size: cover;
+
+	color: #fff;
+
+	&-cards{
+		display: inline-flex;
+		justify-content: space-around;
+		margin-left: auto;
+		margin-right: auto;
+		width: 100%;
+		padding-left: 10%;
+		padding-right: 10%;
+	}
+
+	&-card{
+		position: relative;
+
+		&__icon{
+			position: absolute;
+			left: -80px;
+			top: 40px;
+		}
+
+		&__text{
+			font-size: 17px;
+			line-height: 19px;
+			margin-top: 0;	
+		}
+
+		&__header{
+			font-size: 22px;
+			margin-bottom: 10px;
+			font-weight: 300;
+
+		}
+	}
+
+	&__header{
+		font-size: 22px;
+	}
+
+
+
+	&__links{
+		margin-top: 90px;
+		width: 50%;
+		text-align: center;
+		margin-left: auto;
+		margin-right: auto;
+		// @include flex--center;
+	}
+}
+
+.links{
+
+
+	&__icon{
+		display: inline-flex;
+		margin: 0 2.5%;
+		transform: scale(1.5);
+		cursor: pointer;
+
+		transition : all 0.3s ease;		
+
+		&:hover{
+			color: #bc2e3a;
+		}
+	}
+
+	&__caption{
+		
+		&::before{
+			position: relative;
+			content: '';
+			display: block;
+			// transform: translateX(-5%);
+			width: 70%;
+			height: 2px;
+			border-top: 2px solid #fff;
+			opacity: 0.43;
+			margin: 30px auto;
+		}
+	}
+}

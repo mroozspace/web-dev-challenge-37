@@ -1,0 +1,60 @@
+.section{
+	// height: 100vh;
+	// height: fit-content;
+	width: 100%;
+	position: relative;
+	display: flex;
+
+	&__header{
+		font-family: "Peace";
+		font-size: 62px;
+		font-weight: 400;
+		margin-top: 0;
+		margin-left: -20px;
+		color: #494949;
+
+		&--center{
+			text-align: center;
+		}
+	}
+
+	&__text{
+		font-size: 17px;
+		line-height: 30px;
+		color: #6a6a6a;
+		max-width: 45%;
+	}
+
+
+	&--home{
+		background: url('/public/img/home-bg.jpg') no-repeat;
+		background-size: cover;
+		background-position-x: 30%;
+
+		min-height: 100vh;
+		height: 100vh;
+
+		.container{ 
+			padding: 0;
+		}
+	}
+
+	&--who-we-are{
+		// height: 576px;
+	}
+
+	&--what-we-do{
+		// height: 744px;
+		background-color: #f5f5f5;
+	}
+
+	&--how-we-work{
+		// height: 744px;
+	}
+
+	&--team{
+		// height: 795px;
+		background-color: #f5f5f5;
+	}
+
+}

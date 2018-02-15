@@ -1,0 +1,31 @@
+.container{
+	width: 100%;
+	max-width: 2000px;
+	height: 100%;
+	padding: 80px 120px ;
+	margin: 0 auto;
+
+	&--flex{
+		@include flex--center;
+		
+	}
+
+	&--50{
+		width: 50%;
+	}
+
+	&--right{
+		float: right;
+	}
+
+	&--left{
+		float: left;
+	}
+
+	&--mac{
+	    position: absolute;
+	    right: 0;
+	    top: 0;
+	    bottom: 0;
+	}
+}

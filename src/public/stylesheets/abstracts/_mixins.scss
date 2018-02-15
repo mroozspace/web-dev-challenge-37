@@ -1,0 +1,53 @@
+/* for all styles */
+@mixin flex--center{
+	display:flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+@mixin inline-flex--center{
+	display:inline-flex;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+@mixin absolute--center{
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+@mixin diamond--before{
+	content: '';
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	width: 190%;
+	height: 100%;
+	top: 0px;
+	left: -80px;
+	// background-size: cover;
+	transform: skewX(25deg);
+	filter: brightness(60%);
+}
+
+@mixin card-photo{
+	content: '';
+	display: block;
+	overflow: hidden;
+	position: absolute;
+	width: 150%;
+	height: 150%;
+	background-size: cover;
+	transform: rotate(-45deg) translateY(-22%);
+}
+
+/* for media queries */
+@mixin fontSizeOf($of, $size){
+	&__#{$of}{
+		font-size: $size;
+	}
+}
+

@@ -1,0 +1,19 @@
+.triangle{
+	transform: rotate(45deg);
+
+	&--who-we-are{
+		width: 0;
+		height: 0;
+		// border-left: 300px solid transparent;
+		border-right: 1000px solid transparent;
+		border-top: 1000px solid #171717;
+		position: absolute;
+		z-index: -1;
+		right: 0%;
+		top : -500px;
+
+		    // border-top: 580px solid transparent;
+		    // border-right: 570px solid #bc2e3a;
+		    // border-bottom: 570px solid transparent;
+	}
+}

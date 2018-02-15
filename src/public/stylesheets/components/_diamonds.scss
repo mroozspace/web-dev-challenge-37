@@ -1,0 +1,98 @@
+.diamonds{
+	width: 70%;
+	height: 50%;
+	// background: #000;
+	float: right;
+	position: relative;
+	transform: translateY(-20%);
+	right: -10%;
+	// right: 100px;
+	display: inline-flex;
+	justify-content: space-around;
+}
+
+.diamond{
+	position: relative;
+	overflow: hidden;
+	padding: 30px;
+	width: 314px;
+	height: 100%;
+	background: #aba;
+	box-shadow: -4px 12px 40px rgba(0, 1, 1, 0.22);
+	transform: skewX(-25deg);
+	
+	transition: all 0.5s ease;
+
+	&::before{
+		@include diamond--before;
+	}
+
+	&--1::before{		
+		background: url('../../img/diamond1.jpg') center no-repeat;
+		background-size: cover;
+	}
+
+	&--2::before{
+		background: url('../../img/diamond2.jpg') center no-repeat;
+		background-size: cover;
+}
+
+	&--3::before{
+		background: url('../../img/diamond3.jpg') center no-repeat;
+		background-size: cover;
+}
+
+	&__num{
+		transform: skewX(25deg);
+		font-size: 58px;
+		font-family: Lato;
+		font-weight: 700;
+		color: #ffffff;
+		position: absolute;
+		right: 5%;
+		top: 0;
+		margin: 0;
+	}
+
+	&__header{
+		transform: skewX(25deg);
+		text-transform: uppercase;
+		font-family: Lato;
+		font-weight: 700;
+		text-shadow: 0 0 10px rgba(35, 31, 32, 0.57);
+		font-size: 40px;
+		color: #ffffff;
+
+		transition: all 0.5s ease;
+
+	}
+
+	&__text{
+		transform: skewX(25deg);
+		color: #ffffff;
+		font-family: "Open Sans";
+		font-size: 18px;
+		line-height: 30px;
+		visibility: hidden;
+		opacity:0;
+
+		transition: all 0.5s ease;
+		transition-delay: 0.2s;
+
+	}
+
+	&__container{
+		transform: translateY(90%);
+		transition: all 0.6s ease;
+
+	}
+
+	&:hover .diamond__container {
+		transform: translateY(10%);
+	}
+
+	&:hover .diamond__text{
+		visibility: visible;
+		opacity:1;
+	}
+}

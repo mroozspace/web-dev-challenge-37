@@ -1,0 +1,33 @@
+.btn{
+	width: 192px;
+	height: 54px;
+	text-transform: uppercase;
+	font-family: Lato;
+	font-size: 21px;
+	font-weight: 700;
+	letter-spacing: 0.32px;
+	border-radius: 30px;
+	border: none;
+	cursor: pointer;
+	
+	transition: all 0.3s ease;
+
+	&:hover{
+		transform: scale(0.95);
+	}
+
+
+	&--bottom{
+		position: relative;
+		bottom: -50px;
+		// transform: translateY(-100%);
+	}
+
+	&--home{
+		position: absolute;
+		bottom: 20%;
+		left: 30%;
+
+	}
+
+}

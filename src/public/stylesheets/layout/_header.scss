@@ -1,0 +1,64 @@
+.header{
+	position: fixed;
+	background: rgba(188, 46, 58, 0.95);
+
+	z-index: 999;
+	height: 80px;
+	left: 0;
+	right: 0;
+	top: 0;
+
+	padding-right: 66px;
+	padding-left: 65px;
+
+	line-height: 85px;
+
+	color: #ffffff;
+
+	&__logo{
+		display: inline-block;
+		float: left;
+		padding: 0;
+		margin: 0;
+		width: 30%;
+		height: 100%;
+
+		font-family:  "Lato"	;
+		font-size: 43px;
+		letter-spacing: -0.47px;
+	}
+
+	&__link-container{
+		display: inline-block;
+		width: 70%;
+
+	}
+
+	&__link{
+		display: inline-block;
+		float: right;
+		padding-right: 20px;
+		letter-spacing: 0.24px;
+		text-transform: uppercase;
+		color: #fff;
+		font-weight: 700;
+		font-size: 15px;
+		transition: text-shadow 0.3s ease;
+
+		&:hover{
+			text-shadow: 0 0  3px #fff;
+		}
+	}
+
+	&__icon-container{
+		float: right;
+		padding-left: 36px;
+	}
+
+	&__icon{
+		color: #fff;
+		padding-right: 27px;
+		
+	}
+
+}
