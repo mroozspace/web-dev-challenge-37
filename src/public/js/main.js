@@ -1,10 +1,11 @@
 (()=>{
 
 	const sections = document.querySelectorAll('.section');
-	const headerLinks = document.querySelectorAll('.header__link');
+	const headerLinks = document.querySelectorAll('.js-header__link');
 	const clientCards = document.querySelectorAll('.client__card--s');
 	const header = document.getElementsByClassName('js-header')[0];
-	
+	const footer = document.getElementsByClassName('js-footer')[0];
+
 	fixedHeader();
 	scrollSections();
 	quotes();
@@ -12,13 +13,15 @@
 	function scrollSections(){
 
 		for (let i=6, a=-1; i>0; i--){
-			
 			a = a+1;
-
 			headerLinks[i].addEventListener('click', () => {
 				sections[a].scrollIntoView({behavior: "smooth", block: "start"});				
 			});			
 		}
+
+		headerLinks[0].addEventListener('click', () => {
+				footer.scrollIntoView({behavior: "smooth", block: "start"});				
+			});			
 	}
 
 	function fixedHeader(){
