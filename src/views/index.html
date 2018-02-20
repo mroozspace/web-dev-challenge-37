@@ -147,16 +147,18 @@
 	<section class="section section--client">
 		<div class="container">
 		<h2 class="section__header">What client says</h2>
-			<div class="client__card"></div>
+			<div id="js-client-card" class="client__card js-client-card"></div>
 
 			<div class="client__container">
 				<img src="public/img/quote.png">
-			<blockquote class="client__opinion"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</blockquote>
-			<p class="client__name">Jinny Snow, COMPANY CEO</p>
+			<blockquote class="client__opinion js-opinion"> Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.</blockquote>
+			<p class="client__name">
+				<span class="js-name">Jinny Snow</span>, 
+				<span class="client__position js-position">Company CEO</span></p>
 			<div class="client__cards">
-				<div class="client__card--s client__card--1 client__card--active"></div>
-				<div class="client__card--s client__card--2"></div>
-				<div class="client__card--s client__card--3"></div>
+				<div class="client__card--s client__card--jinnySnow client__card--active js-client-card-small"></div>
+				<div class="client__card--s client__card--camilleBalboa js-client-card-small"></div>
+				<div class="client__card--s client__card--johnSnow js-client-card-small"></div>
 			</div>
 			</div>
 		</div>

@@ -40,6 +40,10 @@ a {
   font-family: 'Peace';
   src: url("../../fonts/Peace.ttf"); }
 
+.fadeIn {
+  -webkit-animation: 500ms fadeIn forwards;
+  animation: 500ms fadeIn forwards; }
+
 @-webkit-keyframes fadeIn {
   0% {
     opacity: 0; }
@@ -461,8 +465,9 @@ a {
     z-index: 1;
     margin: 0 20px;
     cursor: pointer;
-    overflow: hidden; }
-  .client__card--1::before {
+    overflow: hidden;
+    border: 2px solid transparent; }
+  .client__card--jinnySnow::before {
     background: url("../../img/girl1.jpeg") center;
     content: '';
     display: block;
@@ -473,7 +478,7 @@ a {
     background-size: cover;
     -webkit-transform: rotate(-45deg) translateY(-22%);
     transform: rotate(-45deg) translateY(-22%); }
-  .client__card--2::before {
+  .client__card--camilleBalboa::before {
     background: url("../../img/girl2.jpeg") center;
     content: '';
     display: block;
@@ -484,7 +489,7 @@ a {
     background-size: cover;
     -webkit-transform: rotate(-45deg) translateY(-22%);
     transform: rotate(-45deg) translateY(-22%); }
-  .client__card--3::before {
+  .client__card--johnSnow::before {
     background: url("../../img/man1.jpeg") center;
     content: '';
     display: block;
@@ -497,6 +502,9 @@ a {
     transform: rotate(-45deg) translateY(-22%); }
   .client__card--active {
     border: 2px solid #bc2e3a; }
+
+.client__position {
+  text-transform: capitalize; }
 
 .client__opinion {
   color: #6a6a6a;
@@ -515,8 +523,7 @@ a {
   font-weight: 700; }
 
 .header {
-  position: fixed;
-  background: rgba(188, 46, 58, 0.95);
+  position: absolute;
   z-index: 999;
   height: 80px;
   left: 0;
@@ -525,7 +532,9 @@ a {
   padding-right: 66px;
   padding-left: 65px;
   line-height: 85px;
-  color: #ffffff; }
+  color: #ffffff;
+  -webkit-transition: background 0.3s ease;
+  transition: background 0.3s ease; }
   .header__logo {
     display: inline-block;
     float: left;
@@ -558,6 +567,29 @@ a {
   .header__icon {
     color: #fff;
     padding-right: 27px; }
+  .header--fixed {
+    position: fixed;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    background: rgba(188, 46, 58, 0.95);
+    -webkit-animation: headerDown 0.5s 0.3s forwards;
+    animation: headerDown 0.5s 0.3s forwards; }
+
+@-webkit-keyframes headerDown {
+  0% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1; } }
+
+@keyframes headerDown {
+  0% {
+    opacity: 0; }
+  100% {
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+    opacity: 1; } }
 
 .footer {
   position: absolute;
@@ -909,7 +941,7 @@ a {
   .section--what-we-do {
     padding-left: 0; }
     .section--what-we-do > .container {
-      padding: 40px; }
+      padding: 80px 40px; }
   .client__cards {
     padding-left: 30px; }
   .diamonds {

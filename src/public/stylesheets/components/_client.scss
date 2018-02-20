@@ -55,15 +55,15 @@
 			border: 2px solid transparent;
 		}
 
-		&--1::before{
+		&--jinnySnow::before{
 			background: url('../../img/girl1.jpeg') center;
 			@include card-photo;
 		}
-		&--2::before{
+		&--camilleBalboa::before{
 			background: url('../../img/girl2.jpeg') center;
 			@include card-photo;
 		}
-		&--3::before{
+		&--johnSnow::before{
 			background: url('../../img/man1.jpeg') center;
 			@include card-photo;
 		}
@@ -71,6 +71,10 @@
 		&--active{
 			border: 2px solid rgb(188, 46, 58);
 		}
+	}
+
+	&__position{
+		text-transform: capitalize;
 	}
 
 	&__opinion{
@@ -90,5 +94,11 @@
 		height: 19px;
 		font-weight: 700;
 	}
+
+	// &-jinnySnow{
+	// 	&::before{
+
+	// 	}
+	// }
 
 }

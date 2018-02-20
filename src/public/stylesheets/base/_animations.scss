@@ -1,3 +1,7 @@
+.fadeIn{
+	animation: 500ms fadeIn forwards;
+}
+
 @keyframes fadeIn{
 	0%{
 		opacity:0;
