@@ -7,11 +7,16 @@
 
 		&__logo{
 			font-size: 20px;
+			padding-left: 40px;
 		}
 
 		&__link{
 			display:none;
 		}
+	}
+
+	.burger{
+		display: inline-block;		
 	}
 
 	.btn{
@@ -75,7 +80,7 @@
 
 		&__icon{
 			float: left;
-			transform: scale(0.6);		
+			transform: scale(0.6);
 		}
 
 		&__text{
@@ -171,38 +176,55 @@
 
 	// out team
 
-	.carousel{
-		
-		height: 75%;
+	.section--team > .container{
+		overflow:hidden;
+	}
 
-		&__card{
-			min-width: 160px;
-			min-height: 160px;
-
-			border: 2px solid #fff;
-
-			&--left{
-				display: none;
-			}
-
-			&--right{
-				display: none;
-			}	
-		}
+		.carousel{
+		transform: scale(0.5);
 
 		&__arrow{
-			border-right: 40px solid transparent;
-    			border-top: 40px solid #424240;
-
-    			&--left{
-				left: 10px;
-    			}
-
-    			&--right{
-    				right: 10px;
-    			}
+			&--left{
+				left: -150px;
+			}
+			&--right{
+				right:-150px;
+			}
 		}
 	}
+
+	// .carousel{
+		
+	// 	height: 75%;
+
+	// 	&__card{
+	// 		min-width: 160px;
+	// 		min-height: 160px;
+
+	// 		border: 2px solid #fff;
+
+	// 		&--left{
+	// 			display: none;
+	// 		}
+
+	// 		&--right{
+	// 			display: none;
+	// 		}	
+	// 	}
+
+	// 	&__arrow{
+	// 		border-right: 40px solid transparent;
+ //    			border-top: 40px solid #424240;
+
+ //    			&--left{
+	// 			left: 10px;
+ //    			}
+
+ //    			&--right{
+ //    				right: 10px;
+ //    			}
+	// 	}
+	// }
 
 	.card-caption__name{
 		font-size: 20px;
@@ -268,6 +290,11 @@
 		}
 	}
 
+	.section--team > .container{
+		padding-left: 60px;
+		padding-right: 60px;
+	}
+
 		.carousel{
 
 		&__arrow{
@@ -278,14 +305,6 @@
 		&__card{
 		min-height: 340px;
 		min-width: 340px;
-
-			&--left{
-		   	transform: rotate(45deg) scale(0.65) translate(0px,0px);
-			}
-
-			&--right{
-		   	transform: rotate(45deg) scale(0.65) translate(0px,0px);
-			}
 		}
 
 	}
@@ -350,6 +369,11 @@
 		   font-size: 18px;
 		}
 
+		&__icon{
+			max-width: 70px;		
+			max-height: 70px;
+		}
+
 		&__text{
 			margin-top: 0;
 		   padding-left: 80px;
@@ -365,9 +389,15 @@
 
 	.section--how-we-work{
 
+		> .container{
+			overflow: hidden;
+		}
+
 		.diamonds{
-			right: 0%;
+			right: -2.5%;
 			width: 100%;
+		min-width: 620px;
+
 		}
 
 		.diamond{

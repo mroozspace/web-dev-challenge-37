@@ -6,7 +6,7 @@
 	const header = document.getElementsByClassName('js-header')[0];
 	const footer = document.getElementsByClassName('js-footer')[0];
 
-	let opinions = [
+	const opinions = [
 	{
 		"name" : "Jinny Snow",
 		"position" : "Company CEO",
@@ -30,6 +30,7 @@
 	scrollSections();
 	quotesDisplay();
 	carousel();
+	burger();
 
 	function scrollSections(){
 
@@ -65,7 +66,6 @@
 		let quotePosition = document.getElementsByClassName('js-position')[0];
 		let quoteImg = document.getElementById('js-client-card');
 
-
 		let quoteData = [quoteOpinion, quoteName, quotePosition, quoteImg];
 
 		for(let i=0; i<clientCards.length; i++){
@@ -74,7 +74,6 @@
 				// active card setup
 				activeCardSetup();
 				clientCards[i].classList.add('client__card--active');
-
 
 				// fade in effect to elements
 				quoteData.forEach( (element)=>{element.classList.add('fadeIn')} )
@@ -90,7 +89,7 @@
 				quoteImg.className = 'client__card js-client-card fadeIn client__card--'+opinions[i].imgClass;
 			});
 		}
-
+	
 		function activeCardSetup(){
 			let active = document.getElementsByClassName('client__card--active')[0];
 			
@@ -102,19 +101,102 @@
 	function carousel(){
 		let arrowLeft = document.getElementsByClassName('carousel__arrow--left')[0];
 		let arrowRight = document.getElementsByClassName('carousel__arrow--right')[0];
+		let arrows = [arrowLeft,arrowRight];
+		let cardName = document.getElementsByClassName('js-carousel-card-name')[0];
+		let cardPosition = document.getElementsByClassName('js-carousel-card-position')[0];
 
-		// arrowRight.addEventListener('click', ()=> {console.log('123')} );
+		arrows.forEach( (arrow) => 
+		{ 
+			arrow.addEventListener('click', ()=> {
+				arrow.classList.add('pulseRedArrow');
+				setTimeout( () => {arrow.classList.remove('pulseRedArrow')} ,500);
+			});
+		});
+
+		arrowRight.addEventListener('click', ()=>{moveRight();});
+		arrowLeft.addEventListener('click', ()=>{moveLeft();} );
+
+		function moveRight(){
+			let leftCard = document.getElementsByClassName('carousel__card-container--left')[0];
+			let midCard = document.getElementsByClassName('carousel__card-container--mid')[0];
+			let rightCard = document.getElementsByClassName('carousel__card-container--right')[0];
+			let hiddenCard = document.getElementsByClassName('carousel__card-container--hidden')[0];
+
+			setTimeout( ()=>{
+
+			leftCard.classList.add('carousel__card-container--mid');
+				leftCard.classList.remove('carousel__card-container--left');
+			midCard.classList.add('carousel__card-container--right');
+				midCard.classList.remove('carousel__card-container--mid');
+			rightCard.classList.add('carousel__card-container--hidden');
+				rightCard.classList.remove('carousel__card-container--right');
+			hiddenCard.classList.add('carousel__card-container--left');
+				hiddenCard.classList.remove('carousel__card-container--hidden');
+
+			}, 150);
+		}
+
+		function moveLeft(){
+			let leftCard = document.getElementsByClassName('carousel__card-container--left')[0];
+			let midCard = document.getElementsByClassName('carousel__card-container--mid')[0];
+			let rightCard = document.getElementsByClassName('carousel__card-container--right')[0];
+			let hiddenCard = document.getElementsByClassName('carousel__card-container--hidden')[0];
+
+			setTimeout( ()=>{
+
+			leftCard.classList.add('carousel__card-container--hidden');
+				leftCard.classList.remove('carousel__card-container--left');
+			midCard.classList.add('carousel__card-container--left');
+				midCard.classList.remove('carousel__card-container--mid');
+			rightCard.classList.add('carousel__card-container--mid');
+				rightCard.classList.remove('carousel__card-container--right');
+			hiddenCard.classList.add('carousel__card-container--right');
+				hiddenCard.classList.remove('carousel__card-container--hidden');
+			}, 150);				
+		}
 	}
 
-		// resetCards();
 
-		// clientCards.forEach( 
-		// 	(card) => card.addEventListener('click', 
-		// 		() => { 
+	// burger
 
-	// function resetCards(){
-	// 	clientCards.forEach( (card) => { card.classList.remove } );
-	// }
+	function burger(){
+		let input = document.getElementsByClassName('js-burger-input')[0];
+		let linkContainer = document.getElementsByClassName('js-header-link-container')[0];
+		let stripes = document.getElementsByClassName('js-stripe');
+		let body = document.getElementsByTagName('body')[0];
+
+
+		input.addEventListener('click', ()=>{
+			// linkContainer.classList.toggle('burger__menu');
+			stripes[0].classList.toggle('burger__stripe--red');
+			stripes[2].classList.toggle('burger__stripe--red');
+			// body.classList.toggle('scroll-lock');
+			// headerLinks.forEach( (link)=> { link.classList.toggle('burger__link')})
+			});
+
+		// headerLinks.forEach( (link) => {
+		// link.addEventListener('click', 
+		// 	() => { 
+		// 	if ( linkContainer.classList.contains('burger__menu') ){
+
+		// 			// linkContainer.classList.add('');
+		// 			setTimeout( () => {
+
+		// 			linkContainer.classList.remove('burger__menu');
+		// 			stripes[0].classList.remove('burger__stripe--red');
+		// 			stripes[2].classList.remove('burger__stripe--red');
+		// 			body.classList.remove('scroll-lock');
+					
+		// 			headerLinks.forEach( (link)=> {
+		// 				link.classList.remove('burger__link');
+		// 			});
+
+
+		// 			},1500);
+		// 		}
+		// 	});
+		// });
+	}
 
 // https://davidwalsh.name/javascript-debounce-function --> optimize scroll
 function debounce(func, wait, immediate) {

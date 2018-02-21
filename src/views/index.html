@@ -9,27 +9,32 @@
 <body>
 	
 	<header class="header js-header">
-		<h1 class="header__logo">Agency</h1>
-		<nav class="header__link-container">
+		<h1 class="header__logo">Agency
+		<div class="burger">
+			<input type="checkbox" class="burger__input js-burger-input" name="">
+			<span class="burger__stripe js-stripe"></span>
+			<span class="burger__stripe js-stripe"></span>
+			<span class="burger__stripe js-stripe"></span>
+	</div>
+		</h1>
+		<nav class="header__link-container js-header-link-container">
 			<nav class="header__icon-container">
 				<a href="" class="header__icon"><i class="fas fa-search"></i></a>
 				<a href="" class="header__icon"><i class="fab fa-facebook-f"></i></a>	
 			</nav>
-			<a href="" id="progress" class="header__link js-header__link">progress</a>
-			<a href="" id="client" class="header__link js-header__link">clients</a>
-			<a href="" id="team" class="header__link js-header__link">team</a>
-			<a href="" id="work" class="header__link js-header__link">work</a>
-			<a href="" id="services" class="header__link js-header__link">services</a>
-			<a href="" id="about" class="header__link js-header__link">about us</a>
-			<a href="" id="home" class="header__link js-header__link">home</a>
+			<a href="" id="progress" class="header__link  js-header__link">progress</a>
+			<a href="" id="client" class="header__link  js-header__link">clients</a>
+			<a href="" id="team" class="header__link  js-header__link">team</a>
+			<a href="" id="work" class="header__link  js-header__link">work</a>
+			<a href="" id="services" class="header__link  js-header__link">services</a>
+			<a href="" id="about" class="header__link  js-header__link">about us</a>
+			<a href="" id="home" class="header__link  js-header__link">home</a>
 		</nav>
 	</header>
 
 	<section class="section section--home">
 		<div class="container">
-			<!-- <div class="skateboarder"> -->
-				<img class="skateboarder" src="public/img/skateboarder.png">			
-			<!-- </div> -->
+			<img class="skateboarder" src="public/img/skateboarder.png">			
 			<button class="btn btn--home t-white">read more</button>
 		</div>
 	</section>
@@ -42,7 +47,7 @@
 			<div class="container--flex container--50 container--mac">
 				<img src="public/img/macbook.png" class="macbook">
 			</div>
-			<button class="btn btn--bottom t-red">read more</button>
+			<button class="btn t-red">read more</button>
 		</div>
 	</section>
 
@@ -118,7 +123,7 @@
 
 			<p class="section__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium.
 		</p>
-			<button class="btn btn--bottom t-red">read more</button>
+			<button class="btn  t-red">read more</button>
 		</div>
 	</section>
 
@@ -127,20 +132,47 @@
 		<h2 class="section__header section__header--center">Our creative team</h2>
 			<div class="carousel">						
 
+			
+				<div class="carousel__card-container carousel__card-container--left js-left-card">
 				<div class="carousel__card carousel__card--left"></div>
-				<div class="carousel__card carousel__card--mid"></div>
-				<div class="carousel__card carousel__card--right"></div>
+					<div class="card-caption">
+						<span class="card-caption__name js-carousel-card-name"><p>Anna Tingle</p></span>
+						<span class="card-caption__position js-carousel-card-position"><p>Designer</p></span>
+					</div>
+				</div>
+				
 
+				<div class="carousel__card-container carousel__card-container--mid js-mid-card">
+					<div class="carousel__card carousel__card--mid"></div>
+				
+					<div class="card-caption">					
+						<span class="card-caption__name js-carousel-card-name"><p>Andrew Smith</p></span>
+						<span class="card-caption__position js-carousel-card-position"><p>Office Manager</p></span>					
+					</div>
+				</div>
+
+				<div class="carousel__card-container carousel__card-container--right js-right-card">
+					<div class="carousel__card carousel__card--right"></div>				
+						<div class="card-caption">					
+							<span class="card-caption__name js-carousel-card-name"><p>Ron North</p></span>
+							<span class="card-caption__position js-carousel-card-position"><p>Developer</p></span>	
+					</div>
+				</div>	
+	
+				<div class="carousel__card-container carousel__card-container--hidden js-hidden-card">
+					<div class="carousel__card carousel__card--hidden"></div>		
+					<div class="card-caption">					
+						<span class="card-caption__name js-carousel-card-name"><p>John Dole</p></span>
+						<span class="card-caption__position js-carousel-card-position"><p>Developer</p></span>	
+					</div>
+				</div>
 
 				<span class="carousel__arrow carousel__arrow--left"></span>
 				<span class="carousel__arrow carousel__arrow--right"></span>
 			
-			<div class="card-caption">
-				<span class="card-caption__name"><p>John Doe</p></span>
-				<span class="card-caption__position"><p>Designer</p></span>
-			</div>
 
 			</div>
+
 		</div>
 	</section>
 

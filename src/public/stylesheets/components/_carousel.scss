@@ -1,13 +1,46 @@
 .carousel{
 	
 	position: relative;
+	// overflow: hidden;
 	width: 100%;
-	height: 80%;
-	
+	height: 70%;
+	// min-height: 450px;
+	margin: 20px 0;
+
 	@include flex--center;
 
+	
+	&__card-container{
+		position: absolute;
+		@include flex--center;
+
+		transition: all 500ms ease;
+
+		&--left{
+			transform: scale(0.8) translateX(-150%);
+			opacity:0.75;
+			filter: blur(2px);					
+		}
+
+		&--mid{
+			z-index:10;
+		}
+
+		&--right{
+			transform: scale(0.8) translateX(150%);
+			opacity:0.75;
+			filter: blur(2px);								
+		}
+
+		&--hidden{
+			transform: scale(0.6);
+			opacity: 0;
+			filter: blur(2px);											
+		}
+	}
+	
 	&__card{
-		position: relative;
+		position: absolute;
 		display: block;
 		min-width: 400px;
 		min-height: 400px;
@@ -18,15 +51,13 @@
 		z-index: 1;
 		overflow: hidden;
 
-		transition: all 0.5s ease;
-
 		&::before{
 			@include card-photo;			
 		}
 
 		&--left{
 			z-index:0;
-			transform: rotate(45deg) scale(0.8) translate(-50px,50px);
+			order: -1;
 			
 			&::before{
 				background: url('../../img/girl1.jpeg') center no-repeat;
@@ -35,20 +66,26 @@
 		}
 
 		&--mid{
-			
+			order: 0;			
 			&::before{
 				background: url('../../img/man1.jpeg') center no-repeat;
-				background-size: cover;
+				background-size: cover;				
 			}
 		}
 
 		&--right{
-			
 			z-index:0;
-			transform: rotate(45deg) scale(0.8) translate(50px,-50px);
+			order: 1;
 
 			&::before{
 				background: url('../../img/man2.jpeg') center no-repeat;
+				background-size: cover;
+			}
+		}
+
+		&--hidden{
+			&::before{
+				background: url('../../img/man3.jpg') center no-repeat;
 				background-size: cover;
 			}
 		}
@@ -58,6 +95,7 @@
 	&__arrow{
 		position: absolute;
 		
+		z-index: 20;
 		cursor: pointer;
 		display: block;
 
@@ -87,16 +125,15 @@
 	}
 }
 
-
 .card-caption{
-	position: absolute;	
-	z-index: 1;
-	bottom: 0;
+	position: relative;	
+	z-index: 33;
+	bottom: -230px;
 
 	transform: skew(45deg);
 	
-	@include flex--center;
-	flex-direction: column;
+	// @include flex--center;
+	// flex-direction: column;
 
 	p{
 		transform: skew(-45deg);		

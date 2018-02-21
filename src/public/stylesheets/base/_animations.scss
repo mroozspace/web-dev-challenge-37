@@ -3,19 +3,25 @@
 }
 
 @keyframes fadeIn{
-	0%{
-		opacity:0;
-	}
-	100%{
-		opacity:1;
-	}
+	0%{ opacity:0; }
+	100%{	opacity:1;}
+}
+
+.fadeOut{
+	animation: 500ms fadeOut forwards;
 }
 
 @keyframes fadeOut{
-	0%{
-		opacity: 1;
-	}
-	100%{
-		opacity: 0;
-	}
+	0%{ opacity: 1;}
+	100%{ opacity: 0; }
+}
+
+.pulseRedArrow{
+	animation: 500ms pulseRedArrow forwards;
+}
+
+@keyframes pulseRedArrow{
+	0% { border-top-color: rgb(66, 66, 64); }
+	50%{ border-top-color: rgb(188, 46, 58); }
+	100% { border-top-color: rgb(66, 66, 64); }
 }

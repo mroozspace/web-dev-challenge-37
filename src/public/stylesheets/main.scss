@@ -16,20 +16,13 @@
 		'components/triangle',
 		'components/diamonds',
 		'components/carousel',
-		'components/client';
-// 		'components/container',
-// 		'components/icons',
-// 		'components/iphone',
-// 		'components/hero',
-// 		'components/search';
+		'components/client',
+		'components/burger';
 
 @import 'layout/header',
 		'layout/footer',
 		'layout/section';
-		
-// 		'layout/menu';
-
-
+	
 @import 'themes/theme';
 
 @import 'layout/media-queries';
